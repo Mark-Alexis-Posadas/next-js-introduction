@@ -38,7 +38,7 @@ export default async function page({ params }) {
         </Link>
       </nav>
       <div className="card">
-        <div className="grid grid-cols-2 items-center">
+        <div className="grid grid-cols-2 items-center place-items-center">
           <Image
             src={store.image}
             alt={store.title}
