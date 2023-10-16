@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const getData = async () => {
   const response = await fetch("https://fakestoreapi.com/products", {
     next: {
@@ -14,10 +16,12 @@ export default async function StoreList() {
   return (
     <div className="grid grid-cols-4 gap-4">
       {data.map((d, index) => {
-        const { title, price, category, description, image } = d;
+        const { id, title, image } = d;
         return (
           <div key={index}>
-            <img src={image} alt={title} />
+            <Link href={`/store/${id}`}>
+              <img src={image} alt={title} />
+            </Link>
           </div>
         );
       })}
