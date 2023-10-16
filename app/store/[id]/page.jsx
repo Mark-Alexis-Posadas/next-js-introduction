@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import Image from "next/image";
 import { notFound } from "next/navigation";
 
 export const dynamicParams = true;
@@ -38,11 +38,21 @@ export default async function page({ params }) {
         </Link>
       </nav>
       <div className="card">
-        <img src={store.image} alt={store.title} />
-        <h3>{store.title}</h3>
-        <p>{store.price}</p>
-        <span>{store.category}</span>
-        <p>{store.description}</p>
+        <div className="grid grid-cols-2 items-center">
+          <Image
+            src={store.image}
+            alt={store.title}
+            width={300}
+            height={300}
+            style={{ objectFit: "contain", width: "200px", height: "200px" }}
+          />
+          <div>
+            <h3>{store.title}</h3>
+            <p>Price: {store.price}</p>
+            <span>Category: {store.category}</span>
+            <p>{store.description}</p>
+          </div>
+        </div>
       </div>
     </div>
   );

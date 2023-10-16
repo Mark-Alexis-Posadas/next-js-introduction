@@ -15,7 +15,7 @@ export default async function StoreList() {
   const data = await getData();
 
   return (
-    <div className="grid grid-cols-4 gap-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
       {data.map((d, index) => {
         const { id, title, image } = d;
         return (
@@ -24,6 +24,7 @@ export default async function StoreList() {
               href={`/store/${id}`}
               className="flex items-center justify-center h-full"
             >
+              <h1 className="text-[#222] text-sm">{title}</h1>
               <Image src={image} alt={title} width={100} height={100} />
               {/* <img /> */}
             </Link>
