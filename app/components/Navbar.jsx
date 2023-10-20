@@ -29,6 +29,12 @@ export default function Navbar() {
             Store
           </Link>
         </li>
+
+        <li className="text-center">
+          <Link href="/test" className="text-white">
+            Test Components
+          </Link>
+        </li>
       </ul>
     </nav>
   );
