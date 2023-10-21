@@ -4,7 +4,7 @@ import Image from "next/image";
 import Logo from "./dojo-logo.png";
 export default function Navbar() {
   return (
-    <nav className="p-4 bg-green-500 flex-col items-start sm:items-center sm:flex-row">
+    <nav className="p-4 bg-green-500 flex-col items-start sm:items-center sm:flex-row md:justify-between">
       <Image
         src={Logo}
         alt="Dojo helpdesk logo"
@@ -12,8 +12,8 @@ export default function Navbar() {
         quality={100}
         placeholder="blur"
       />
-      <h1>Dojo</h1>
-      <ul className="w-full sm:w-60 flex align-center justify-center flex-col sm:flex-row">
+      <h1 className="lg:me-auto">Dojo</h1>
+      <ul className="w-full sm:w-60 lg:w-auto flex align-center justify-center flex-col sm:flex-row">
         <li className="text-center mb-3 sm:mb-0">
           <Link href="/" className=" text-white">
             Dashboard
