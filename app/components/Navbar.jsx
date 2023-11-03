@@ -6,7 +6,7 @@ export default function Navbar() {
   return (
     <nav className="p-4 bg-green-500 flex-col items-start sm:items-center sm:flex-row md:justify-between">
       <h1>Root Layout</h1>
-      {/* <Image
+      <Image
         src={Logo}
         alt="Dojo helpdesk logo"
         width={70}
@@ -36,7 +36,7 @@ export default function Navbar() {
             Test Components
           </Link>
         </li>
-      </ul> */}
+      </ul>
     </nav>
   );
 }
